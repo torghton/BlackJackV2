@@ -50,23 +50,23 @@ public class Table extends JPanel implements KeyListener, MouseListener {
 
         updater = new Updater();
 
-        imageLoader.loadImage("BoardBackground", "./assets/Backgrounds/CasinoBoardBackground.jpg");
-        imageLoader.loadImage("HitImage", "./assets/ExtraPlayingCards/HitImage.png");
-        imageLoader.loadImage("HitImageHovered", "./assets/ExtraPlayingCards/HitImageHovered.png");
-        imageLoader.loadImage("StandImage", "./assets/ExtraPlayingCards/StandImage.png");
-        imageLoader.loadImage("StandImageHovered", "./assets/ExtraPlayingCards/StandImageHovered.png");
-        imageLoader.loadImage("NewGameImage", "./assets/ExtraPlayingCards/NewGameImage.png");
-        imageLoader.loadImage("NewGameImageHovered", "./assets/ExtraPlayingCards/NewGameImageHovered.png");
-        imageLoader.loadImage("HintImage", "./assets/ExtraPlayingCards/HintImage.png");
-        imageLoader.loadImage("HintImageHovered", "./assets/ExtraPlayingCards/HintImageHovered.png");
-        imageLoader.loadImage("CardBack", "./assets/ExtraPlayingCards/PlayingCardBack.png");
+        imageLoader.loadImage("BoardBackground", "../assets/Backgrounds/CasinoBoardBackground.jpg");
+        imageLoader.loadImage("HitImage", "../assets/ExtraPlayingCards/HitImage.png");
+        imageLoader.loadImage("HitImageHovered", "../assets/ExtraPlayingCards/HitImageHovered.png");
+        imageLoader.loadImage("StandImage", "../assets/ExtraPlayingCards/StandImage.png");
+        imageLoader.loadImage("StandImageHovered", "../assets/ExtraPlayingCards/StandImageHovered.png");
+        imageLoader.loadImage("NewGameImage", "../assets/ExtraPlayingCards/NewGameImage.png");
+        imageLoader.loadImage("NewGameImageHovered", "../assets/ExtraPlayingCards/NewGameImageHovered.png");
+        imageLoader.loadImage("HintImage", "../assets/ExtraPlayingCards/HintImage.png");
+        imageLoader.loadImage("HintImageHovered", "../assets/ExtraPlayingCards/HintImageHovered.png");
+        imageLoader.loadImage("CardBack", "../assets/ExtraPlayingCards/PlayingCardBack.png");
 
 
         int[] cardValues = {2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10, 11};
 
         String[] cardValueNames = {"2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"};
         Image[] cardImages = new Image[52];
-        File file = new File("./assets/CardValues");
+        File file = new File("../assets/CardValues");
 
         String[] pathNames = file.list();
         ArrayList<String> pathNamesAL = new ArrayList<>();
@@ -76,7 +76,7 @@ public class Table extends JPanel implements KeyListener, MouseListener {
             for(int j = 0; j < 13; j++) {
                 int index = getIndexOfStartStringInArrayList(pathNamesAL, cardValueNames[j]);
 
-                cardImages[(i*13)+j] = imageLoader.loadImage(pathNamesAL.get(index), "./assets/CardValues/" + pathNamesAL.get(index));
+                cardImages[(i*13)+j] = imageLoader.loadImage(pathNamesAL.get(index), "../assets/CardValues/" + pathNamesAL.get(index));
 
                 pathNamesAL.remove(index);
             }
